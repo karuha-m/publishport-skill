@@ -1,0 +1,23 @@
+{
+  "name": "publishport",
+  "owner": {
+    "name": "PublishPort",
+    "url": "https://publishport.app"
+  },
+  "description": "Publish to social and content platforms from the browser you are already logged into.",
+  "plugins": [
+    {
+      "name": "publishport",
+      "source": "./plugins/publishport",
+      "displayName": "PublishPort",
+      "description": "Post, cross-post and schedule content on 60+ social and content platforms through your own logged-in browser — X, Reddit, LinkedIn, Medium, Bluesky, Xiaohongshu, Douyin, Bilibili, Zhihu and more.",
+      "version": "0.1.0",
+      "author": { "name": "PublishPort", "url": "https://publishport.app" },
+      "homepage": "https://publishport.app/docs/agent-skill",
+      "repository": "https://github.com/karuha-m/publishport-skill",
+      "license": "MIT",
+      "category": "productivity",
+      "keywords": ["publishing", "social-media", "cross-posting", "content", "automation", "mcp"]
+    }
+  ]
+}

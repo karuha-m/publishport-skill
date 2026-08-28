@@ -1,0 +1,11 @@
+{
+  "name": "publishport",
+  "displayName": "PublishPort",
+  "version": "0.1.0",
+  "description": "Post, cross-post and schedule content on 60+ social and content platforms through your own logged-in browser.",
+  "author": { "name": "PublishPort", "url": "https://publishport.app" },
+  "homepage": "https://publishport.app/docs/agent-skill",
+  "repository": "https://github.com/karuha-m/publishport-skill",
+  "license": "MIT",
+  "keywords": ["publishing", "social-media", "cross-posting", "content", "automation"]
+}
