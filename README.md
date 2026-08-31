@@ -58,9 +58,16 @@ Settings → Capabilities → Skills.
 
 The skill is the instructions; the publishing itself needs the **PublishPort desktop app**
 ([publishport.app](https://publishport.app), macOS / Windows / Linux). Install it, sign in to the
-platforms you want, and your agent can publish to them — either directly through the bundled
-`ppcli` when the agent runs on the same machine, or through PublishPort's MCP endpoint when it
-lives somewhere else (claude.ai, a phone, a server).
+platforms you want, and your agent can publish to them — over PublishPort's MCP endpoint if it
+speaks MCP, otherwise with the official CLI:
+
+```bash
+npx publishport login        # paste the access endpoint from the app's Connect AI panel
+npx publishport capabilities # which of your accounts are connected, on which machine
+```
+
+Both routes go through the same relay, so the agent does not have to run on the machine that
+publishes — claude.ai, a phone or a server works just as well.
 
 Setup guide: [publishport.app/docs/agent-skill](https://publishport.app/docs/agent-skill)
 
