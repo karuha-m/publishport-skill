@@ -76,9 +76,11 @@ Everywhere below, `ppcli <platform> …` means *run that command through your ch
 4. **Show the user what you are about to post** — the text, the target platform, and the account —
    and get a yes before the first publish of a session. After that, a summary per post is enough.
 5. **Run one command per action.** Give uploads a generous timeout (video can take minutes):
-   `timeout_ms` on MCP, `--timeout-ms` on the CLI — the default is 60 s and it will cut a video
-   upload in half. If you need to wait between steps, wait in a separate command rather than
-   chaining with `&&`.
+   `timeout_ms` on MCP, `--timeout-ms` on the CLI — the default is 300 s, which a large video
+   upload can exceed. On MCP a command that runs longer than about 45 s returns `[STILL_RUNNING]`
+   with a handle instead of a result: call `local_bash` again with `wait_for=<handle>` (no
+   `command`) to collect it, and never resend the command itself. If you need to wait between
+   steps, wait in a separate command rather than chaining with `&&`.
 6. **Verify.** Use the returned URL or id, or re-query the platform's own listing, and hand the
    user a link they can click. A publish is not done until you have seen it exist.
 
